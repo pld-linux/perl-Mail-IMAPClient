@@ -8,12 +8,12 @@
 Summary:	Mail::IMAPClient - an IMAP Client API
 Summary(pl):	Mail::IMAPClient - API klienta IMAP
 Name:		perl-Mail-IMAPClient
-Version:	2.2.8
+Version:	2.2.9
 Release:	1
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	d8a02891cf82901a7c96e2b50ccc23bb
+# Source0-md5:	21c1901d55a2d57f73840cad478c665d
 URL:		http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.readme
 BuildRequires:	perl-devel >= 5.8
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -51,6 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README Todo
-%{perl_vendorlib}/Mail/IMAPClient
-%{perl_vendorlib}/Mail/IMAPClient.pm
+%{perl_vendorlib}/%{pdir}/%{pnam}
+%{perl_vendorlib}/%{pdir}/%{pnam}.pm
 %{_mandir}/man3/*
