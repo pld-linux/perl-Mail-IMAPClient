@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_with	tests	# perform "make test" (currently fails?)
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Mail
 %define	pnam	IMAPClient
@@ -11,8 +15,8 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d8a02891cf82901a7c96e2b50ccc23bb
 URL:		http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.readme
-BuildRequires:	rpm-perlprov
-BuildRequires:	perl-devel
+BuildRequires:	perl-devel >= 5.8
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,8 +32,12 @@ IMAP za pomoc± gniazd oraz konwersacjê z nim w protokole IMAP.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-yes n | %{__perl} Makefile.PL
+yes n | %{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+
 %{__make}
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -43,6 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README Todo
-%{perl_sitelib}/Mail/IMAPClient
-%{perl_sitelib}/Mail/IMAPClient.pm
+%{perl_vendorlib}/Mail/IMAPClient
+%{perl_vendorlib}/Mail/IMAPClient.pm
 %{_mandir}/man3/*
