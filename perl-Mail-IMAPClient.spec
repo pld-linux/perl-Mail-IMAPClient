@@ -1,25 +1,31 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	Mail::IMAPClient perl module
-Summary(pl):	Modu³ perla Mail::IMAPClient
+%define	pdir	Mail
+%define	pnam	IMAPClient
+Summary:	Mail::IMAPClient - an IMAP Client API
+Summary(pl):	Mail::IMAPClient - API klienta IMAP
 Name:		perl-Mail-IMAPClient
 Version:	2.2.8
 Release:	1
-License:	Artistic License or GPL
+License:	Artistic or GPL
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Mail/Mail-IMAPClient-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d8a02891cf82901a7c96e2b50ccc23bb
-URL:		http://www.cpan.org/modules/by-module/Mail/Mail-IMAPClient-%{version}.readme
+URL:		http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.readme
 BuildRequires:	rpm-perlprov
 BuildRequires:	perl-devel
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module provides perl routines that simplify a sockets connection
+This module provides Perl routines that simplify a sockets connection
 to and an IMAP conversation with an IMAP server.
 
+%description
+Modu³ ten udostêpnia funkcje Perla upraszczaj±ce po³±czenia z serwerem
+IMAP za pomoc± gniazd oraz konwersacjê z nim w protokole IMAP.
+
 %prep
-%setup -q -n Mail-IMAPClient-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 yes n | %{__perl} Makefile.PL
