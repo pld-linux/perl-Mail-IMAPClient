@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test" (currently fails?)
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Mail
-%define	pnam	IMAPClient
+%define		pdir	Mail
+%define		pnam	IMAPClient
 Summary:	Mail::IMAPClient - an IMAP Client API
 Summary(pl):	Mail::IMAPClient - API klienta IMAP
 Name:		perl-Mail-IMAPClient
