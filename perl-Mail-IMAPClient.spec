@@ -10,7 +10,7 @@ Summary(pl):	Mail::IMAPClient - API klienta IMAP
 Name:		perl-Mail-IMAPClient
 Version:	2.2.9
 Release:	1
-License:	Artistic or GPL
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	21c1901d55a2d57f73840cad478c665d
