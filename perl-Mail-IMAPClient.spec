@@ -51,6 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README Todo
-%{perl_vendorlib}/%{pdir}/%{pnam}
-%{perl_vendorlib}/%{pdir}/%{pnam}.pm
+%{perl_vendorlib}/Mail/IMAPClient
+%{perl_vendorlib}/Mail/IMAPClient.pm
 %{_mandir}/man3/*
