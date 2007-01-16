@@ -24,7 +24,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module provides Perl routines that simplify a sockets connection
 to and an IMAP conversation with an IMAP server.
 
-%description
+%description -l pl
 Modu³ ten udostêpnia funkcje Perla upraszczaj±ce po³±czenia z serwerem
 IMAP za pomoc± gniazd oraz konwersacjê z nim w protokole IMAP.
 
