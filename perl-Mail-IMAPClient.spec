@@ -6,7 +6,7 @@
 %define		pdir	Mail
 %define		pnam	IMAPClient
 Summary:	Mail::IMAPClient - an IMAP Client API
-Summary(pl):	Mail::IMAPClient - API klienta IMAP
+Summary(pl.UTF-8):   Mail::IMAPClient - API klienta IMAP
 Name:		perl-Mail-IMAPClient
 Version:	2.2.9
 Release:	1
@@ -24,9 +24,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module provides Perl routines that simplify a sockets connection
 to and an IMAP conversation with an IMAP server.
 
-%description -l pl
-Modu³ ten udostêpnia funkcje Perla upraszczaj±ce po³±czenia z serwerem
-IMAP za pomoc± gniazd oraz konwersacjê z nim w protokole IMAP.
+%description -l pl.UTF-8
+ModuÅ‚ ten udostÄ™pnia funkcje Perla upraszczajÄ…ce poÅ‚Ä…czenia z serwerem
+IMAP za pomocÄ… gniazd oraz konwersacjÄ™ z nim w protokole IMAP.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
