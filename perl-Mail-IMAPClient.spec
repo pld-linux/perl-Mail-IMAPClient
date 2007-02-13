@@ -6,7 +6,7 @@
 %define		pdir	Mail
 %define		pnam	IMAPClient
 Summary:	Mail::IMAPClient - an IMAP Client API
-Summary(pl.UTF-8):   Mail::IMAPClient - API klienta IMAP
+Summary(pl.UTF-8):	Mail::IMAPClient - API klienta IMAP
 Name:		perl-Mail-IMAPClient
 Version:	2.2.9
 Release:	1
