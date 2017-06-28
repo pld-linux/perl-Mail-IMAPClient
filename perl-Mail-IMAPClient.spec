@@ -8,13 +8,13 @@
 Summary:	Mail::IMAPClient - an IMAP Client API
 Summary(pl.UTF-8):	Mail::IMAPClient - API klienta IMAP
 Name:		perl-Mail-IMAPClient
-Version:	3.30
+Version:	3.39
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 #Source0:	http://www.cpan.org/modules/by-module/Mail/%{pdir}-%{pnam}-%{version}.tar.gz
 Source0:	http://search.cpan.org/CPAN/authors/id/P/PL/PLOBBES/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a1965d99f1e25bab580e19e6546f433d
+# Source0-md5:	b813cfd79a7cab4e886d9caa94991502
 URL:		http://search.cpan.org/dist/Mail-IMAPClient/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
