@@ -7,13 +7,13 @@
 Summary:	Mail::IMAPClient - an IMAP Client API
 Summary(pl.UTF-8):	Mail::IMAPClient - API klienta IMAP
 Name:		perl-Mail-IMAPClient
-Version:	3.39
-Release:	2
+Version:	3.43
+Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 #Source0:	http://www.cpan.org/modules/by-module/Mail/%{pdir}-%{pnam}-%{version}.tar.gz
 Source0:	http://search.cpan.org/CPAN/authors/id/P/PL/PLOBBES/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b813cfd79a7cab4e886d9caa94991502
+# Source0-md5:	3330380b1b68fe9d4a442f9fe30c5014
 URL:		http://search.cpan.org/dist/Mail-IMAPClient/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -47,6 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# man page is generated; drop the duplicate standalone POD
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/Mail/IMAPClient.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
