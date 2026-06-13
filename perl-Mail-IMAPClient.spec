@@ -11,8 +11,7 @@ Version:	3.43
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-#Source0:	http://www.cpan.org/modules/by-module/Mail/%{pdir}-%{pnam}-%{version}.tar.gz
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PL/PLOBBES/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-authors/id/P/PL/PLOBBES/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	3330380b1b68fe9d4a442f9fe30c5014
 URL:		http://search.cpan.org/dist/Mail-IMAPClient/
 BuildRequires:	perl-devel >= 1:5.8.0
